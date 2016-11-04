@@ -1,8 +1,7 @@
 
-var curry =  function(func, args) {
-  var arglist=[];
-  if (args) {
-    arglist = args;
+var curry = function(func, arglist) {
+  if (!arglist) {
+    var arglist = [];
   }
 
   var curried = function() {
@@ -17,6 +16,6 @@ var curry =  function(func, args) {
     }
   };
   return curried;
-}
+};
 
 module.exports = curry;

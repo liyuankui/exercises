@@ -36,9 +36,9 @@ describe('curry', function() {
       return a + b + c;
     });
     assert.equal(add(1)(2)(3), 6);
-    assert.equal(add(2)(3)(4), 9);
+    assert.equal(add(3)(4)(2), 9);
   });
-  
+
   it("doesn't only work with addition", function() {
     var merge = curry(function(a, b, c) {
       return [a, b, c].join(', ');
